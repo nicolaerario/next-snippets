@@ -1,4 +1,4 @@
-import { db } from '@/db';
+import db from '@/db';
 import { redirect } from 'next/navigation';
 
 export default function SnippetCreatePage() {

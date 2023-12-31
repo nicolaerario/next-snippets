@@ -1,4 +1,4 @@
-import { db } from '@/db';
+import db from '@/db';
 import { notFound } from 'next/navigation';
 
 interface Props {
