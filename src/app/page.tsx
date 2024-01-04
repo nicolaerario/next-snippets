@@ -16,17 +16,24 @@ export default async function Home() {
           New
         </Link>
       </div>
+      {/* Empty list of snippets */}
+      {snippets.length < 1 && (
+        <div className="rounded-md border-l-4 border-black bg-gray-100 p-4">
+          <p className="text-sm font-medium">There are no snippets yet, please add one</p>
+        </div>
+      )}
       {/* List of snippets */}
-      {snippets.map((snippet) => (
-        <Link
-          key={snippet.id}
-          href={`/snippets/${snippet.id}`}
-          className="flex items-center justify-between rounded border p-2"
-        >
-          {snippet.title}
-          <span>View</span>
-        </Link>
-      ))}
+      {snippets.length >= 1 &&
+        snippets.map((snippet) => (
+          <Link
+            key={snippet.id}
+            href={`/snippets/${snippet.id}`}
+            className="flex items-center justify-between rounded border p-2"
+          >
+            {snippet.title}
+            <span>View</span>
+          </Link>
+        ))}
     </div>
   );
 }
