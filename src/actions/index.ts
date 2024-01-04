@@ -1,6 +1,7 @@
 'use server';
 
 import db from '@/db';
+import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
 export async function createSnippet(_formState: { message: string }, formData: FormData) {
@@ -38,6 +39,7 @@ export async function createSnippet(_formState: { message: string }, formData: F
     }
   }
 
+  revalidatePath('/');
   redirect('/');
 }
 
@@ -55,5 +57,6 @@ export async function deleteSnippet(id: number) {
     where: { id },
   });
 
+  revalidatePath('/');
   redirect('/');
 }
