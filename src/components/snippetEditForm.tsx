@@ -26,6 +26,7 @@ export default function SnippetEditForm({ snippet }: Props) {
   return (
     <>
       <Editor
+        className="my-4"
         height="40vh"
         theme="vs-dark"
         language="javascript"
