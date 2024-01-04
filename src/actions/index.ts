@@ -43,7 +43,7 @@ export async function createSnippet(_formState: { message: string }, formData: F
   redirect('/');
 }
 
-export async function editSnippet(id: number, code: string) {
+export async function editSnippet(id: string, code: string) {
   await db.snippet.update({
     where: { id },
     data: { code },
@@ -53,7 +53,7 @@ export async function editSnippet(id: number, code: string) {
   redirect(`/snippets/${id}`);
 }
 
-export async function deleteSnippet(id: number) {
+export async function deleteSnippet(id: string) {
   await db.snippet.delete({
     where: { id },
   });

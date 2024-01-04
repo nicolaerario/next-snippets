@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default async function SnippetEditPage({ params }: Props) {
-  const id = Number(params.id);
+  const id = params.id;
   const snippet = await db.snippet.findUnique({ where: { id } });
 
   if (!snippet) return notFound();

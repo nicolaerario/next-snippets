@@ -9,7 +9,7 @@ interface Props {
 
 export default async function ShowSnippetPage({ params }: Props) {
   const snippet = await db.snippet.findUnique({
-    where: { id: Number(params.id) },
+    where: { id: params.id },
   });
 
   if (!snippet) {
@@ -44,5 +44,5 @@ export default async function ShowSnippetPage({ params }: Props) {
 export async function generateStaticParams() {
   const snippets = await db.snippet.findMany();
 
-  return snippets.map((snippet) => ({ id: snippet.id.toString() }));
+  return snippets.map((snippet) => ({ id: snippet.id }));
 }
