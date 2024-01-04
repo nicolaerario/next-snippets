@@ -59,5 +59,6 @@ export async function deleteSnippet(id: string) {
   });
 
   revalidatePath('/');
+  revalidatePath(`/snippets/${id}`);
   redirect('/');
 }
