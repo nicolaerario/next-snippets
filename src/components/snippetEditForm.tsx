@@ -29,7 +29,7 @@ export default function SnippetEditForm({ snippet }: Props) {
         className="my-4 rounded border border-black"
         height="40vh"
         theme="vs-dark"
-        language="javascript"
+        language="typescript"
         defaultValue={code}
         options={{ minimap: { enabled: false }, fontSize: 16 }}
         onChange={handleEditorChange}
