@@ -26,7 +26,7 @@ export default function SnippetEditForm({ snippet }: Props) {
   return (
     <>
       <Editor
-        className="my-4"
+        className="my-4 rounded border border-black"
         height="40vh"
         theme="vs-dark"
         language="javascript"
@@ -34,6 +34,7 @@ export default function SnippetEditForm({ snippet }: Props) {
         options={{ minimap: { enabled: false }, fontSize: 16 }}
         onChange={handleEditorChange}
       />
+
       <button
         className="rounded border p-2"
         onClick={handleEditSnippet}

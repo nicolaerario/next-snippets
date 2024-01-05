@@ -20,8 +20,8 @@ export default async function ShowSnippetPage({ params }: Props) {
 
   return (
     <div>
-      <div className="my-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold">{snippet.title}</h1>
+      <div className="flex items-center justify-between py-4">
+        <h3 className="text-xl font-bold">{snippet.title}</h3>
         <div className="flex gap-4">
           <Link
             className="rounded border p-2"

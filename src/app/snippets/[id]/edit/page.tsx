@@ -12,5 +12,14 @@ export default async function SnippetEditPage({ params }: Props) {
 
   if (!snippet) return notFound();
 
-  return <SnippetEditForm snippet={snippet} />;
+  return (
+    <div className="py-4">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-bold">Edit Snippet</h3>
+        <div className="text-xl italic">{snippet.title}</div>
+      </div>
+
+      <SnippetEditForm snippet={snippet} />
+    </div>
+  );
 }

@@ -11,8 +11,8 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-2">
       {/* Header */}
-      <div className="flex items-center justify-between py-2">
-        <h3 className="text-3xl font-bold">Snippets</h3>
+      <div className="flex items-center justify-between py-4">
+        <h1 className="text-3xl font-bold">Snippets</h1>
         <Link
           href={'/snippets/new'}
           className="rounded border p-2"

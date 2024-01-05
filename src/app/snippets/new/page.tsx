@@ -8,9 +8,9 @@ export default function SnippetCreatePage() {
 
   return (
     <form action={action}>
-      <h3 className="p-3 font-bold">Create a Snippet</h3>
+      <h3 className="py-4 text-xl font-bold">Create a Snippet</h3>
       <div className="flex flex-col gap-4">
-        <div className="flex gap-4">
+        <div className="flex flex-col gap-2">
           <label
             className="w-12"
             htmlFor="title"
@@ -25,7 +25,7 @@ export default function SnippetCreatePage() {
           />
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex flex-col gap-2">
           <label
             className="w-12"
             htmlFor="code"
@@ -44,14 +44,13 @@ export default function SnippetCreatePage() {
             {formState.message}
           </div>
         )}
-
-        <button
-          type="submit"
-          className="rounded bg-blue-200 p-2"
-        >
-          Save
-        </button>
       </div>
+      <button
+        type="submit"
+        className="my-4 rounded border p-2"
+      >
+        Save
+      </button>
     </form>
   );
 }
