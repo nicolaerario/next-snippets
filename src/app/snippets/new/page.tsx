@@ -1,13 +1,23 @@
 'use client';
 
 import { createSnippet } from '@/actions';
+import Link from 'next/link';
 import { useFormState } from 'react-dom';
 
 export default function SnippetCreatePage() {
   const [formState, action] = useFormState(createSnippet, { message: '' });
 
   return (
-    <form action={action}>
+    <form
+      className="py-4"
+      action={action}
+    >
+      <Link
+        className="rounded bg-black p-2 text-white"
+        href={'/'}
+      >
+        Back
+      </Link>
       <h3 className="py-4 text-xl font-bold">Create a Snippet</h3>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
