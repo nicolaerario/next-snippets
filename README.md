@@ -4,6 +4,17 @@ _A simple CRUD app with Nextjs + Prisma ORM + TailwindCSS_
 
 ## Getting Started
 
+### First steps first:
+
+- Clone this repository
+- Run:
+
+```bash
+npm i
+```
+
+to install all dependencies.
+
 ### Database connection:
 
 - Create an `.env` file based on `.env.example` and enter the db URL.
