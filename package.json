@@ -12,7 +12,7 @@
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
     "@prisma/client": "^5.7.1",
-    "next": "14.2.15",
+    "next": "14.2.21",
     "prisma": "^5.7.1",
     "react": "^18",
     "react-dom": "^18"
