@@ -4,12 +4,14 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 interface Props {
-  params: { id: string };
+  params: Promise<{
+    id: string;
+  }>;
 }
 
 export default async function ShowSnippetPage({ params }: Props) {
   const snippet = await db.snippet.findUnique({
-    where: { id: params.id },
+    where: { id: (await params).id },
   });
 
   if (!snippet) {
